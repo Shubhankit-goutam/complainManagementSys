@@ -1,0 +1,229 @@
+{
+	"info": {
+		"_postman_id": "948ccecb-57d2-4994-b389-ad9775c8dd40",
+		"name": "Complain",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13967049"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/api/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"role\":\"Vendor\",\n    \"name\":\"div\",\n    \"email\":\"div@gmail.com\",\n    \"phoneno\":\"9690854107\",\n    \"password\":\"div123\",\n    \"jobType\":\"Electronic\",\n    \"created_by_Id\":\"63275399681030c0c2591d75\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"akhil@gmail.com\",\n    \"password\":\"akhil123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/delete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":\"632761f339739c4759cbf772\",\n    \"created_by_Id\":\"63275399681030c0c2591d75\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/complain",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"complain_title\" : \"Laptop Issue\",\n    \"complain_disc\" : \"Laptop matherboard issue\",\n    \"complain_type\" : \"Laptop\",\n    \"complain_remark\" : \"\",\n    \"empId\":\"632756d05eac69a44b5cfecc\",\n    \"UserId\" : \"632761f339739c4759cbf772\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/complain",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"complain"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/getcomplain/632761f339739c4759cbf772",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/getcomplain/632761f339739c4759cbf772",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"getcomplain",
+						"632761f339739c4759cbf772"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/Admin_check_complain/?id=63275399681030c0c2591d75&type=",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/check_complain/?id=63275399681030c0c2591d75&type=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"check_complain",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "63275399681030c0c2591d75"
+						},
+						{
+							"key": "type",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/updateComplain?complainId=63276e0072eede7254612166&complain_status=0",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/updateComplain?complainId=63276e0072eede7254612166&complain_status=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"updateComplain"
+					],
+					"query": [
+						{
+							"key": "complainId",
+							"value": "63276e0072eede7254612166"
+						},
+						{
+							"key": "complain_status",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/complainstatus/63276d9b72eede7254612162",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/complainstatus/63276d9b72eede7254612162",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"complainstatus",
+						"63276d9b72eede7254612162"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
